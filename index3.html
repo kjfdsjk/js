@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="r"></label><input type="number" id="r">
+<button onclick="myfuntion()">CLICK</button>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    function myfuntion() {
+        let R= +document.getElementById("r").value;
+        let S= R*2*3.14;
+        document.getElementById("result").innerHTML = "result: " + S;
+    }
+</script>
