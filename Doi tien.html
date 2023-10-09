@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Amount</td>
+        <td>From Currency</td>
+        <td>To Currency	</td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="insert"></label><input type="text" id="insert">
+        </td>
+        <td>
+            <label for="From Currency"></label><select id="From Currency">
+                <option value="1">VND</option>
+                <option value="23000">USD</option>
+            </select>
+        </td>
+        <td>
+            <label for="To Currency"></label><select id="To Currency">
+                <option value="1">VND</option>
+                <option value="23000">USD</option>
+            </select>
+        </td>
+        <td>
+            <button onclick="myfuntion()">CONVERT</button>
+        </td>
+    </tr>
+</table>
+<p id="result"></p>
+</body>
+</html>
+<script>
+    function myfuntion() {
+        let Z= +document.getElementById("insert").value;
+        let X=  +document.getElementById("From Currency").value;
+        let Y= +document.getElementById("To Currency").value;
+        let M= Z*X/Y;
+
+        document.getElementById("result").innerHTML = "result: " + M;
+    }
+</script>
